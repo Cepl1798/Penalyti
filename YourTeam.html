@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="W3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+        body, html {
+        height: 100%;
+        line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("/w3images/mac.jpg");
+        min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+        padding: 16px;
+        }
+    </style>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a class="w3-animate-left" href="Penalytics.html"><img src="logo.png" alt="Logo" style="max-width: 10%; height: auto;"></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="About.html" class="w3-bar-item w3-button w3-animate-right">ABOUT</a>
+                <a href="Penalties.html" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-futbol-o"></i> PENALTIES</a>
+                <a href="YourTeam.html" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-users"></i> YOUR TEAM </a>
+                <a href="Profile.html" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-user-circle"></i> PROFILE</a>
+                <a href="Contact.html" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16 w3-animate-top">Close ×</a>
+        <a href="About.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right">ABOUT</a>
+        <a href="Penalties.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-futbol-o"></i> PENALTIES</a>
+        <a href="YourTeam.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-users"></i> YOUR TEAM</a>
+        <a href="Profile.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-user-circle"></i> PROFILE</a>
+        <a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-envelope"></i> CONTACT</a>
+    </nav>
+
+    <style>
+        body {
+            margin: 0; /* Elimina el margen por defecto del cuerpo de la página */
+        }
+
+        .w3-container {
+            width: 100%; /* Establece el ancho al 100% */
+            background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
+            padding: 100px 70px;
+            box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w3-container w3-animate-top">
+        <h3>Real Madric C.F </h3>
+    </div>
+  
+    <div class="w3-quarter w3-margin-left "></div>
+
+    <center><p class="w3-large w3-penalytics "> Ideal team </p></center>
+    <p class=" w3-margin-left w3-animate-left">Thanks to our advanced machine learning tool, we offer a comprehensive template for assembling your ideal team. This is widely recognized as the quintessential starting lineup, often referred to as 
+	  the 'perfect 11.'</p>
+    <p class=" w3-margin-left w3-animate-left">Our sophisticated algorithms analyze player performance, strategic considerations, and various other factors to help you create a winning combination that suits your preferences and 
+    br>goals. With this invaluable resource, you can make informed decisions to optimize your team's potential and achieve success on the field.</p>
+    <p class=" w3-margin-left w3-animate-left"> Enter the name of the team you are going to play against. This way we can give you an analysis
+    of what the ideal 11 would be on the day of your match.</p>
+    <form class="w3-animate-left" action="ideal11.html" method="GET">
+        <label for="opponentName" class=" w3-margin-left">Opponent's name:</label>
+        <input type="text" id="opponentName" name="comentario" placeholder="Enter opponent's name" required>
+        <br>
+        <center>
+            <input type="submit" class="w3-button w3-penalytics" value="Submit">
+            <input type="reset" class="w3-button w3-penalytics" value="Delete">
+        </center>
+    </form>
+
+    <div class="w3-quarter w3-margin-left "></div>
+ 
+        <center> <p class="w3-large w3-penalytics "> List of players </p></center>
+
+        <div class="w3-animate-right">
+            <p class=" w3-margin-left"> Choose the player you want to analyze:</p>
+            <style>
+                /* Estilo para que los divs estén en línea */
+                div {
+                    display: inline-block;
+                    margin-right: 10px; /* Espacio entre las imágenes */
+                }
+            </style>
+
+            <form action="/submit" method="post">
+                <div>
+                    <a href="COURTOIS.html">
+                        <img src="COURTOIS.jpg" alt="Opción 1" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina3.html">
+                        <img src="CARVAJAL.jpg" alt="Opción 3" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina4.html">
+                        <img src="MILITAO.jpg" alt="Opción 4" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina5.html">
+                        <img src="ALABA.jpg" alt="Opción 5" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina6.html">
+                        <img src="NACHO.jpg" alt="Opción 6" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina7.html">
+                        <img src="LUCAS.jpg" alt="Opción 7" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina8.html">
+                        <img src="FRAN-GARCIA.jpg" alt="Opción 8" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina9.html">
+                        <img src="RÜDIGER.jpg" alt="Opción 9" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina10.html">
+                        <img src="MENDY.jpg" alt="Opción 10" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina11.html">
+                        <img src="bellingham.jpg" alt="Opción 11" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina12.html">
+                        <img src="KROOS.jpg" alt="Opción 12" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina13.html">
+                        <img src="modric.jpg" alt="Opción 13" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina14.html">
+                        <img src="CAMAVINGA.jpg" alt="Opción 14" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina15.html">
+                        <img src="VALVERDE.jpg" alt="Opción 15" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina17.html">
+                        <img src="VINICIUS.jpg" alt="Opción 17" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina18.html">
+                        <img src="RODRYGO.jpg" alt="Opción 18" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina19.html">
+                        <img src="JOSELU.jpg" alt="Opción 19" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina20.html">
+                        <img src="BRAHIM.jpg" alt="Opción 20" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina21.html">
+                        <img src="TCHOUAMENI.jpg" alt="Opción 21" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina22.html">
+                        <img src="CEBALLOS.jpg" alt="Opción 22" width="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina23.html">
+                        <img src="ARDA.jpg" alt="Opción 23" width="100">
+                    </a>
+                </div>
+        </div>
+  
+    <div class="w3-quarter w3-margin-left "> </div>
+
+    <center> <p class="w3-large w3-penalytics "> Update your database </p></center>
+
+    <form action="process.php"  action="Submit.html" method="GET">
+        <label for="file" class="w3-animate-left w3-margin-left" >Select a file:</label>
+        <input type="file" class="w3-animate-right" id="file"  name="file" accept=".csv, .sql">
+        <br>
+    </form>
+        <center><a href="Submit.html"><input type="submit" class="w3-button w3-penalytics w3-animate-bottom" value="Submit"></a></center>
+    <br>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="W3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+        body, html {
+        height: 100%;
+        line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("/w3images/mac.jpg");
+        min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+        padding: 16px;
+        }
+    </style>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a class="w3-animate-left" href="Penalytics.html"><img src="logo.png" alt="Logo" style="max-width: 10%; height: auto;"></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="About.html" class="w3-bar-item w3-button w3-animate-right">ABOUT</a>
+                <a href="Penalties.html" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-futbol-o"></i> PENALTIES</a>
+                <a href="YourTeam.html" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-users"></i> YOUR TEAM </a>
+                <a href="Profile.html" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-user-circle"></i> PROFILE</a>
+                <a href="Contact.html" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16 w3-animate-top">Close ×</a>
+        <a href="About.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right">ABOUT</a>
+        <a href="Penalties.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-futbol-o"></i> PENALTIES</a>
+        <a href="YourTeam.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-users"></i> YOUR TEAM</a>
+        <a href="Profile.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-user-circle"></i> PROFILE</a>
+        <a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-animate-right"><i class="fa fa-envelope"></i> CONTACT</a>
+    </nav>
+
+    <style>
+        body {
+            margin: 0; /* Elimina el margen por defecto del cuerpo de la página */
+        }
+
+        .w3-container {
+            width: 100%; /* Establece el ancho al 100% */
+            background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
+            padding: 100px 70px;
+            box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w3-container w3-animate-top">
+        <h3>Penalties</h3>
+    </div>
+
+    <div class="w3-row-padding" style="margin-top:64px">
+        <div class="w3-third w3-animate-left" style="margin-top:48px">
+            <h3>Who should kick?</h3>
+            <form class="w3-animate-left" action="Result.html" method="GET">      
+                <label for="time">Time:</label>
+                <input class="w3-input w3-border" type=time id="time" name="time" required>
+        
+                <label for="rival">Rival:</label>
+                <input class="w3-input w3-border" type=text id="rival" name="rival" required>
+        
+                <label for="portero">Goalkeeper:</label>
+                <input class="w3-input w3-border" type=text id="portero" name="portero" required>
+        
+                <label for="HorA">Home or Away:</label>
+                <p>
+                    <input class="w3-border" type="radio" id="HorA" name="Home" value="Home">Home
+                    <input class="w3-border" type="radio" id="HorA" name="Away" value="Away">Away
+                </p>
+                <center><input type="submit" class="w3-button w3-penalytics" value="Submit"></center>
+            </form>
+        </div>
+
+        <div class="w3-third w3-animate-right" style="margin-top:48px">
+            <h3>Penalty Shootout</h3>
+                <form class="w3-animate-left" action="ResultShootout.html" method="GET">            
+                        <label for="rival">Rival:</label>
+                        <input class="w3-input w3-border" type=text id="rival" name="rival" required>
+                
+                        <label for="portero">Goalkeeper:</label>
+                        <input class="w3-input w3-border" type=text id="portero" name="portero" required>
+                
+                        <label for="HorA">Home or Away:</label>
+                        <p>
+                            <input class="w3-border" type="radio" id="HorA" name="Home" value="Home">Home
+                            <input class="w3-border" type="radio" id="HorA" name="Away" value="Away">Away
+                        </p>
+                        <center><input type="submit" class="w3-button w3-penalytics" value="Submit"></center>
+                </form>
+        </div>
+        <div class="w3-third w3-animate-right" style="margin-top:48px">
+            <h3>Probability to Score</h3>
+                <form class="w3-animate-left" action="Score.html" method="GET">
+                        <label for="nombre">Player:</label>
+                        <input class="w3-input w3-border" type=text id="nombre" name="nombre" required>
+                
+                        <label for="time">Time:</label>
+                        <input class="w3-input w3-border" type=time id="time" name="time" required>
+                
+                        <label for="rival">Rival:</label>
+                        <input class="w3-input w3-border" type=text id="rival" name="rival" required>
+                
+                        <label for="portero">Goalkeeper:</label>
+                        <input class="w3-input w3-border" type=text id="portero" name="portero" required>
+                
+                        <label for="HorA">Home or Away:</label>
+                        <p>
+                            <input class="w3-border" type="radio" id="HorA" name="Home" value="Home">Home
+                            <input class="w3-border" type="radio" id="HorA" name="Away" value="Away">Away
+                        </p>
+                        <center><input type="submit" class="w3-button w3-penalytics" value="Submit"></center>
+                </form>
+        </div>
+      </div>
+</body>
+</html>
